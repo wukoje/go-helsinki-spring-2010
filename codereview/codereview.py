@@ -1013,6 +1013,7 @@ def CheckContributor(ui, repo, user=None):
 	return userline
 
 def FindContributor(ui, repo, user, warn=True):
+	return user, user
 	try:
 		f = open(repo.root + '/CONTRIBUTORS', 'r')
 	except:
