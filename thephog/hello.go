@@ -1,9 +1,7 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
-	fmt.Printf("EPIC FAIL\n")
+	fmt.Printf("EPIC WINS!\n")
 }
