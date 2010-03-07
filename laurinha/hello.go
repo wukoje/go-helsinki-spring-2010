@@ -5,5 +5,7 @@ import (
 )
 
 func main() {
-	fmt.Printf("EPIC FAIL\n")
+	fmt.Printf("1. EPIC\n")
+	fmt.Printf("2. ???\n")
+	fmt.Printf("3. Profit\n")
 }
