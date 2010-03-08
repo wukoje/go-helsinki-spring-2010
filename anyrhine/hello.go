@@ -4,6 +4,4 @@ import (
 	"fmt"
 )
 
-func main() {
-	fmt.Printf("EPIC FAIL\n")
-}
+func main() { fmt.Printf("nothing epic about it\n") }
