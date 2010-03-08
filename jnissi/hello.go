@@ -5,5 +5,5 @@ import (
 )
 
 func main() {
-	fmt.Printf("EPIC FAIL\n")
+	fmt.Printf("EPIC TIE\n")
 }
