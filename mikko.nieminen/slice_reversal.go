@@ -31,30 +31,18 @@ func main() {
 		slice[i]=i;
 	}
 
-	fmt.Printf ("order before slice reversal:\n")
-	print_slice(slice)
+	fmt.Printf ("order before slice reversal:\n%v\n", slice)
 
 	reverse (slice)
 
-	fmt.Printf ("\norder after slice reversal:\n")
-	print_slice(slice)
-
+	fmt.Printf ("\norder after slice reversal:\n%v\n", slice)
 
 }
 
 func reverse(s []int) {
 	last_index := len(s)-1
 	loop_length := len(s)/2
-	tmp := 0
 	for i := 0; i<loop_length; i++ {
-		tmp = s[i];
-		s[i] = s[last_index-i]
-		s[last_index-i] = tmp
+		s[i], s[last_index-i] = s[last_index-i], s[i] 
 	}
-}
-
-func print_slice(slice []int) {
-	for _, c := range slice {
-		fmt.Printf ("%v\n", c)
-	}	
 }
