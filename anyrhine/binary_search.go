@@ -6,7 +6,7 @@ func search(s []int, e int) int {
 	i := 0
 	j := len(s)
 	for i < j {
-		m := int(uint(i + j) / 2)
+		m := int(uint(i+j) / 2)
 		if s[m] < e {
 			i = m + 1
 		} else if s[m] > e {
