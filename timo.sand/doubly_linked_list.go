@@ -10,24 +10,25 @@ func main() {
 	testList.firstNode = new(node)
 	testList.firstNode.element = "Test"
 
-	printList(testList)
+	fmt.Printf("%v", testList)
+	fmt.Printf("%v", testList)
 	testList.insert(1, "Insert test")
-	printList(testList)
+	fmt.Printf("%v", testList)
 	testList.insert(1, "Second test")
-	printList(testList)
+	fmt.Printf("%v", testList)
 	testList.insert(4, "Third test")
-	printList(testList)
-	fmt.Println("Length of the list:", len(testList))
+	fmt.Printf("%v", testList)
+	fmt.Println("Length of the list:", testList.Len())
 	testList.delete(0)
-	printList(testList)
-	fmt.Println("Length of the list:", len(testList))
+	fmt.Printf("%v", testList)
+	fmt.Println("Length of the list:", testList.Len())
 	testList.delete(0)
 	testList.delete(0)
-	printList(testList)
-	fmt.Println("Length of the list:", len(testList))
+	fmt.Printf("%v", testList)
+	fmt.Println("Length of the list:", testList.Len())
 	testList.delete(0)
-	printList(testList)
-	fmt.Println("Length of the list:", len(testList))
+	fmt.Printf("%v", testList)
+	fmt.Println("Length of the list:", testList.Len())
 }
 
 type list struct {
@@ -102,15 +103,16 @@ func (l *list) delete(i int) {
 	}
 }
 
-func printList(l *list) {
-	fmt.Printf("doubly-linked-list: -> ")
+func (l *list) String() (result string) {
+	result = fmt.Sprint("doubly-linked-list: -> ")
 	for tempNode := l.firstNode; tempNode != nil; tempNode = tempNode.next {
-		fmt.Printf("%s -> ", tempNode.element)
+		result += fmt.Sprintf("%s -> ", tempNode.element)
 	}
-	fmt.Println("nil")
+	result += fmt.Sprintln("nil")
+	return
 }
 
-func len(l *list) (count int) {
+func (l *list) Len() (count int) {
 	for tempNode := l.firstNode; tempNode != nil; tempNode, count = tempNode.next, count+1 {
 	}
 	return
