@@ -1,0 +1,7 @@
+vtx e1 1 0 1
+vtx e2 -1 1 1
+vtx e3 -1 -1 1
+vtx c1 0 0 0
+tri a e1 e2 e3
+vtx x 0 2 1
+cam c1 x
