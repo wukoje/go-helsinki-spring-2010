@@ -1,3 +1,4 @@
+
 package main
 
 import (
@@ -5,5 +6,5 @@ import (
 )
 
 func main() {
-	fmt.Printf("EPIC FAIL\n")
+	fmt.Printf("EPIC RECURSION!\n")
 }
