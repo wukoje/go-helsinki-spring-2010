@@ -19,7 +19,7 @@ func main() {
 	list = reverse(list)
 	fmt.Println(list)
 
-        list = make([]int, 10)
+    list = make([]int, 10)
 	list[0] = 30
 	list[1] = 31
 	list[2] = 32
@@ -31,7 +31,7 @@ func main() {
 	list[8] = 38
 	list[9] = 39
 
-        fmt.Println(list)
+    fmt.Println(list)
 	list = reverse(list)
 	fmt.Println(list)
 
@@ -42,12 +42,11 @@ func main() {
 
 
 func reverse(s []int) []int {
-	s2 := make([]int, len(s))
 	helper := 0
-
-	for i := len(s) - 1; i >= 0; i-- {
-		s2[helper] = s[i]
-		helper++
+	for i := 0; i < ( len(s) / 2); i++ {
+		helper = s[i]	
+		s[i] = s[ (len(s)-1) - i ]
+		s[(len(s)-1)-i] = helper 
 	}
-	return s2
+	return s
 }
