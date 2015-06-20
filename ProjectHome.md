@@ -1,0 +1,1 @@
+Code repository for student work from the Go course at the University of Helsinki in Spring 2010
